@@ -1,0 +1,56 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>顶风作案</title>
+		<style>
+			html, body, div, video,span, iframe, h1, h2, h3, h4, p, a, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup,tt,textarea, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video,input{
+			    margin:0;
+				padding:0;
+				border:0;
+				list-style:none;
+				font-style: normal;
+				box-sizing: border-box;
+				-webkit-box-sizing: border-box;
+				font-weight: 500;
+			}
+			html,body{
+				font-size: calc(100*(100vw/640));
+			    font-size: -webkit-calc(100*(100vw/640));
+				max-width: 640px;
+				min-width: 320px;
+				margin: 0 auto;
+				overflow-x: hidden;
+				-webkit-text-size-adjust:none;
+			}
+			a,a:hover,u{text-decoration: none;}  
+			img{display: block;margin: 0 auto;width: 100%;}
+			#gamePanel{width:100%;height:95%;background:Black;position:fixed;top:0%;left:0%;overflow: hidden;}
+			#gamePanel .score{font-size:.3rem;color:White;position:absolute;left:0;top:0;z-index:9999;}
+			#gamePanel .bullet{width:5px;height:15px;position:absolute;background:url(img/bullet.png);overflow:hidden;-webkit-background-size: 5px 15px;background-size: 5px 15px;
+			_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="img/bullet.png");}
+			#gamePanel .flyer{width:18px;height:18px;position:absolute;background:url(img/flyer.png);-webkit-background-size: 18px 18px;background-size: 18px 18px;
+			_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="img/flyer.png");}
+			#gamePanel .enemy{width:18px;height:18px;position:absolute;background:url(img/enemy.png);-webkit-background-size: 18px 18px;background-size: 18px 18px;
+			_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="img/enemy.png");}
+			#gamePanel .bingo{width:18px;height:18px;position:absolute;background:url(img/bingo.png);-webkit-background-size: 18px 18px;background-size: 18px 18px;
+			_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="img/bingo.png");}
+			#startBtn{border-width:30px;border-style:solid;border-color:Black Black Black Green;
+			position:absolute;left:48%;top:40%;cursor:pointer;width:0px;height:0px;overflow:hidden;}			
+		</style>
+	</head>
+	
+	<body>
+		
+		<div id="gamePanel" tabindex="0">
+			<div class="score">分数：<span id="score">0</span></div>
+			<div id="startBtn" onclick="Start()"></div>
+		</div>
+		
+		<script type="text/javascript" src="js/flyer.js"></script>
+		<script type="text/javascript" src="js/enemy.js"></script>
+		<script type="text/javascript" src="js/bullet.js"></script>
+		<script type="text/javascript" src="js/game.js"></script>
+	</body>
+</html>
